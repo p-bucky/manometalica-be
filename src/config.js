@@ -1,7 +1,10 @@
 import dotenv from "dotenv";
+import { setupSequelize } from "./db.config.js";
 
-function setupConfig() {
+async function setupConfig() {
   dotenv.config();
+  
+  await setupSequelize()
 }
 
 export default setupConfig;

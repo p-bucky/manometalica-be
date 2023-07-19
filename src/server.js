@@ -5,7 +5,7 @@ import setupRoutes from "./routes/index.js";
 (async () => {
   const app = express();
 
-  setupConfig();
+  await setupConfig();
 
   await setupRoutes(app)
 
