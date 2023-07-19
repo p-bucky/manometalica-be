@@ -5,7 +5,7 @@ import axios from "axios";
 function getGoogleAuthURL() {
   const rootUrl = "https://accounts.google.com/o/oauth2/v2/auth";
   const options = {
-    redirect_uri: `${process.env.SERVER_ROOT_URI}/${CONFIG_CONSTANTS.GOOGLE_REDIRECT_URL}`,
+    redirect_uri: `${CONFIG_CONSTANTS.SERVER_ROOT_URI}/${CONFIG_CONSTANTS.GOOGLE_REDIRECT_URL}`,
     client_id: process.env.GOOGLE_CLIENT_ID,
     access_type: "offline",
     response_type: "code",

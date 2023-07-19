@@ -11,7 +11,7 @@ async function loginUser(req, res) {
     code,
     clientId: process.env.GOOGLE_CLIENT_ID,
     clientSecret: process.env.GOOGLE_CLIENT_SECRET,
-    redirectUri: `${process.env.SERVER_ROOT_URI}/${CONFIG_CONSTANTS.GOOGLE_REDIRECT_URL}`,
+    redirectUri: `${CONFIG_CONSTANTS.SERVER_ROOT_URI}/${CONFIG_CONSTANTS.GOOGLE_REDIRECT_URL}`,
   });
 
   const user = await authService.getGoogleUserProfile({
